@@ -1,0 +1,13 @@
+{
+  "name": "@jeffnyman/glkwebkit",
+  "version": "0.1.0",
+  "description": "A Web-Based Glk Implementation",
+  "author": "Jeff Nyman",
+  "license": "MIT",
+  "keywords": [
+    "Glk",
+    "API",
+    "library",
+    "interface"
+  ]
+}
