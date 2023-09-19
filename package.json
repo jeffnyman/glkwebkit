@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "serve": "reload -b -d ./app -w ./app -p 8080",
-    "rollup": "rollup --config",
+    "rollup": "rollup --config --watch",
     "copy:html": "copyfiles -u 1 \"./test/*.html\" app",
     "delete": "rimraf app"
   },

@@ -13,6 +13,10 @@ export default [
         format: "cjs",
       },
     ],
+    watch: {
+      include: "./src/**",
+      clearScreen: false,
+    },
     plugins: [
       babel({
         exclude: "node_modules/**",
@@ -36,6 +40,10 @@ export default [
     output: {
       file: "./app/glkapi.cjs.js",
       format: "cjs",
+    },
+    watch: {
+      include: "./src/**",
+      clearScreen: false,
     },
     plugins: [
       babel({
