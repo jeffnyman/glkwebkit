@@ -9,5 +9,11 @@
     "API",
     "library",
     "interface"
-  ]
+  ],
+  "scripts": {
+    "copy": "copyfiles -u 1 \"./src/**/*.js\" app"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
+  }
 }
