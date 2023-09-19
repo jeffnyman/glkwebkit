@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.22.15",
+    "@babel/preset-env": "^7.22.20",
     "copyfiles": "^2.4.1",
     "rimraf": "^5.0.1"
   }
