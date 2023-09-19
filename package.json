@@ -11,10 +11,14 @@
     "interface"
   ],
   "scripts": {
+    "babel:webglk": "npx babel ./src/webglk.js > app/webglk.js",
+    "babel:glkjs": "npx babel ./src/glkjs.js > app/glkjs.js",
+    "babel": "npm run babel:webglk && npm run babel:glkjs",
     "copy": "copyfiles -u 1 \"./src/**/*.js\" app",
     "delete": "rimraf app"
   },
   "devDependencies": {
+    "@babel/cli": "^7.22.15",
     "copyfiles": "^2.4.1",
     "rimraf": "^5.0.1"
   }
