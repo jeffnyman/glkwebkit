@@ -12,15 +12,11 @@
   ],
   "scripts": {
     "serve": "reload -b -d ./app -w ./app -p 8080",
-    "babel:webglk": "npx babel ./src/webglk.js > app/webglk.js",
-    "babel:glkjs": "npx babel ./src/glkjs.js > app/glkjs.js",
-    "babel": "npm run babel:webglk && npm run babel:glkjs",
     "rollup": "rollup --config",
     "copy:html": "copyfiles -u 1 \"./test/*.html\" app",
     "delete": "rimraf app"
   },
   "devDependencies": {
-    "@babel/cli": "^7.22.15",
     "@babel/preset-env": "^7.22.20",
     "@rollup/plugin-babel": "^6.0.3",
     "copyfiles": "^2.4.1",
