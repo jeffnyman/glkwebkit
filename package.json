@@ -16,8 +16,6 @@
     "babel": "npm run babel:webglk && npm run babel:glkjs",
     "rollup": "rollup --config",
     "copy:html": "copyfiles -u 1 \"./test/*.html\" app",
-    "copy:apps": "copyfiles -u 1 \"./src/**/*.js\" app",
-    "copy": "npm run copy:apps && npm run copy:html",
     "delete": "rimraf app"
   },
   "devDependencies": {
