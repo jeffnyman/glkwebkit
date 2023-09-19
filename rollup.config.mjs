@@ -1,3 +1,5 @@
+import babel from "@rollup/plugin-babel";
+
 export default [
   {
     input: "./src/webglk.js",
@@ -11,6 +13,23 @@ export default [
         format: "cjs",
       },
     ],
+    plugins: [
+      babel({
+        exclude: "node_modules/**",
+        babelHelpers: "bundled",
+        presets: [
+          [
+            "@babel/preset-env",
+            {
+              modules: "auto",
+              targets: {
+                browsers: "defaults",
+              },
+            },
+          ],
+        ],
+      }),
+    ],
   },
   {
     input: "./src/glkjs.js",
@@ -18,5 +37,22 @@ export default [
       file: "./app/glkapi.cjs.js",
       format: "cjs",
     },
+    plugins: [
+      babel({
+        exclude: "node_modules/**",
+        babelHelpers: "bundled",
+        presets: [
+          [
+            "@babel/preset-env",
+            {
+              modules: "auto",
+              targets: {
+                node: "current",
+              },
+            },
+          ],
+        ],
+      }),
+    ],
   },
 ];
