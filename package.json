@@ -14,6 +14,7 @@
     "babel:webglk": "npx babel ./src/webglk.js > app/webglk.js",
     "babel:glkjs": "npx babel ./src/glkjs.js > app/glkjs.js",
     "babel": "npm run babel:webglk && npm run babel:glkjs",
+    "rollup": "rollup --config",
     "copy": "copyfiles -u 1 \"./src/**/*.js\" app",
     "delete": "rimraf app"
   },
@@ -21,6 +22,7 @@
     "@babel/cli": "^7.22.15",
     "@babel/preset-env": "^7.22.20",
     "copyfiles": "^2.4.1",
-    "rimraf": "^5.0.1"
+    "rimraf": "^5.0.1",
+    "rollup": "^3.29.2"
   }
 }
