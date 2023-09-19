@@ -1,4 +1,5 @@
 import babel from "@rollup/plugin-babel";
+import eslint from "@rollup/plugin-eslint";
 
 export default [
   {
@@ -18,6 +19,10 @@ export default [
       clearScreen: false,
     },
     plugins: [
+      eslint({
+        fix: true,
+        exclude: ["./node_modules/**"],
+      }),
       babel({
         exclude: "node_modules/**",
         babelHelpers: "bundled",
@@ -46,6 +51,10 @@ export default [
       clearScreen: false,
     },
     plugins: [
+      eslint({
+        fix: true,
+        exclude: ["./node_modules/**"],
+      }),
       babel({
         exclude: "node_modules/**",
         babelHelpers: "bundled",
