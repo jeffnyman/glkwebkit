@@ -8,6 +8,12 @@
 <body>
   <script type="module">
     import { WebGlk } from "./webglk.esm.js";
+
+    const webGlk = new WebGlk();
+    webGlk.init();
+
+    console.log(webGlk.name);
+    console.log(webGlk.version);
   </script>
 </body>
 </html>
