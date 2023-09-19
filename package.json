@@ -11,9 +11,11 @@
     "interface"
   ],
   "scripts": {
-    "copy": "copyfiles -u 1 \"./src/**/*.js\" app"
+    "copy": "copyfiles -u 1 \"./src/**/*.js\" app",
+    "delete": "rimraf app"
   },
   "devDependencies": {
-    "copyfiles": "^2.4.1"
+    "copyfiles": "^2.4.1",
+    "rimraf": "^5.0.1"
   }
 }
