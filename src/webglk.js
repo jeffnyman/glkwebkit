@@ -18,6 +18,25 @@ export class WebGlk {
   }
 
   error(message) {
-    console.log(message);
+    let element = document.querySelector("#error #content");
+
+    if (!element) {
+      return;
+    }
+
+    this.removeDomChildren(element);
+    element.appendChild(document.createTextNode(message));
+
+    element = document.getElementById("error");
+    element.classList.remove("hidden");
+  }
+
+  removeDomChildren(parent) {
+    const children = parent.childNodes;
+
+    while (children.length > 0) {
+      const childObject = children.item(0);
+      parent.removeChild(childObject);
+    }
   }
 }
