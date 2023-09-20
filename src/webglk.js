@@ -12,8 +12,12 @@ export class WebGlk {
     }
 
     if (!appInterface) {
-      console.log("No app interface was provided.");
+      this.error("No app interface was provided.");
       return;
     }
+  }
+
+  error(message) {
+    console.log(message);
   }
 }
