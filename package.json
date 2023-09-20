@@ -12,9 +12,12 @@
   ],
   "scripts": {
     "serve": "reload -b -d ./app -w ./app -p 8080",
-    "rollup": "rollup --config --watch",
     "copy:html": "copyfiles -u 1 \"./test/*.html\" app",
-    "delete": "rimraf app"
+    "delete": "rimraf app",
+    "build:dev": "rollup --config --watch --environment NODE_ENV:dev",
+    "build": "rollup --config --watch",
+    "start:dev": "npm run copy:html && npm run build:dev && npm run serve",
+    "start": "npm run copy:html && npm run build && npm run serve"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.20",
