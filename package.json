@@ -16,8 +16,8 @@
     "delete": "rimraf app",
     "build:dev": "rollup --config --watch --environment NODE_ENV:dev",
     "build": "rollup --config --watch",
-    "start:dev": "npm run copy:html && npm run build:dev && npm run serve",
-    "start": "npm run copy:html && npm run build && npm run serve"
+    "start:dev": "npm-run-all --parallel copy:html build:dev serve",
+    "start": "npm-run-all --parallel copy:html build serve"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.20",
@@ -25,6 +25,7 @@
     "@rollup/plugin-eslint": "^9.0.4",
     "@rollup/plugin-terser": "^0.4.3",
     "copyfiles": "^2.4.1",
+    "npm-run-all": "^4.1.5",
     "reload": "^3.2.1",
     "rimraf": "^5.0.1",
     "rollup": "^3.29.2"
