@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "serve": "reload -b -d ./app -w ./app -p 8080",
-    "copy:html": "copyfiles -u 1 \"./test/*.html\" app",
+    "copy:html": "copyfiles -u 1 \"./test/*.{html,css}\" app",
     "delete": "rimraf app",
     "build:dev": "rollup --config --watch --environment NODE_ENV:dev",
     "build": "rollup --config --watch",
