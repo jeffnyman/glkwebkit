@@ -1,5 +1,6 @@
 import babel from "@rollup/plugin-babel";
 import eslint from "@rollup/plugin-eslint";
+import terser from "@rollup/plugin-terser";
 
 const devMode = process.env.NODE_ENV === "dev";
 console.log(`Running in ${devMode ? "dev" : "prod"} mode.`);
@@ -41,6 +42,13 @@ export default [
           ],
         ],
       }),
+      !devMode &&
+        terser({
+          compress: {
+            drop_console: true,
+            drop_debugger: true,
+          },
+        }),
     ],
   },
   {
@@ -73,6 +81,13 @@ export default [
           ],
         ],
       }),
+      !devMode &&
+        terser({
+          compress: {
+            drop_console: true,
+            drop_debugger: true,
+          },
+        }),
     ],
   },
 ];
