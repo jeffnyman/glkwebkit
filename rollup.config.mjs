@@ -1,6 +1,9 @@
 import babel from "@rollup/plugin-babel";
 import eslint from "@rollup/plugin-eslint";
 
+const devMode = process.env.NODE_ENV === "dev";
+console.log(`Running in ${devMode ? "dev" : "prod"} mode.`);
+
 export default [
   {
     input: "./src/webglk.js",
